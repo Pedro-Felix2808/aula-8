@@ -117,6 +117,9 @@ while True:
    elif opcao == "7":
        adicionar()
 
+   elif opcao == "7":
+        baixo()     
+
    elif opcao == "0":
     print("Saindo do sistema...")
     break
