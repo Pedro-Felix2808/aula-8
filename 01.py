@@ -105,7 +105,8 @@ def adicionar():
         "estoque": estoque
     }   
 
-    produtos.append(novo_produto)  
+    produtos.append(novo_produto)
+    salvar_produtos(produtos)  
     print(novo_produto) 
 
 
