@@ -21,7 +21,7 @@
         "estoque": 18
     },
     {
-        "id": 4,
+        "id": 10,
         "nome": "SSD NVMe 512GB",
         "categoria": "Armazenamento",
         "preco": 289.9,
@@ -76,5 +76,4 @@
         "preco": 100.0,
         "estoque": 50
     }
-
 ]

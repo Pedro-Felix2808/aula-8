@@ -37,6 +37,46 @@ def saida():
             print(produto)
 
 
+def alterar():
+    nome = input("Digite o nome do produto que deseja fazer alterações: ")
+
+    for produto in produtos:
+        if produto["nome"] == nome:
+
+            print("1 - Alterar nome")
+            print("2 - Alterar preço")
+            print("3 - Alterar categoria")
+            print("4 - Alterar id")
+
+            opcao = input("Escolha uma opção: ")
+
+            if opcao == "1":
+                novo_nome = input("Digite o novo nome: ")
+                produto["nome"] = novo_nome
+
+            elif opcao == "2":
+                novo_preco = float(input("Digite o novo preço: "))
+                produto["preco"] = novo_preco
+
+            elif opcao == "3":
+                nova_categoria = input("Digite a nova categoria: ")
+                produto["categoria"] = nova_categoria
+
+            elif opcao == "4":
+                novo_id = int(input("Digite o novo id: "))
+                produto["id"] = novo_id
+
+            else:
+                print("Opção inválida")
+                return
+
+            salvar_produtos(produtos)
+
+            print(produto)
+            return
+
+    print("Produto não encontrado.")
+
 
   
            
@@ -54,7 +94,7 @@ def adicionar():
     id = produtos[-1]["id"]          
     nome = input("Digite o nome do produto: ")
     categoria = input("Digite a categoria do seu produto: ") 
-    preco = int(input("Digite o preço do seu produto: ")) 
+    preco = float(input("Digite o preço do seu produto: ")) 
     estoque = int(input("Digite a quantidade do estoque: "))
     id += 1 
 
@@ -109,7 +149,7 @@ while True:
     saida()
 
    elif opcao == "5":
-       criar()
+    alterar()
 
    elif opcao == "6":
     remover()   
