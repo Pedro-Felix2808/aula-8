@@ -90,7 +90,6 @@ def remover():
 
 
 def adicionar():
-    print(produtos[-1])
     id = produtos[-1]["id"]          
     nome = input("Digite o nome do produto: ")
     categoria = input("Digite a categoria do seu produto: ") 
@@ -108,6 +107,12 @@ def adicionar():
 
     produtos.append(novo_produto)  
     print(novo_produto) 
+
+
+def baixo():
+    for produto in produtos:
+        if produto["estoque"] <= 10:
+            print(produto)
 
 
 
@@ -141,7 +146,7 @@ while True:
 
    elif opcao == "2":
     buscar()
-
+ 
    elif opcao == "3":
     entrada()
 
@@ -157,8 +162,8 @@ while True:
    elif opcao == "7":
        adicionar()
 
-   elif opcao == "7":
-        baixo()     
+   elif opcao == "8":
+       baixo()     
 
    elif opcao == "0":
     print("Saindo do sistema...")
