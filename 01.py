@@ -26,6 +26,7 @@ def entrada():
     for produto in produtos:
         if produto["nome"] == en:
             produto["estoque"] += quan
+            salvar_produtos(produtos)
             print(produto)
 
 def saida():
@@ -34,6 +35,7 @@ def saida():
     for produto in produtos:
         if produto["nome"] == sa:
             produto["estoque"] -= quan
+            salvar_produtos(produtos)
             print(produto)
 
 
@@ -86,6 +88,7 @@ def remover():
         if produto["nome"] == re:
             produtos.remove(produto)
             break
+        salvar_produtos(produtos)
     print(produtos) 
 
 
